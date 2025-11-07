@@ -1,26 +1,101 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'minion_probold_cond';
+    src: url('/fonts/minionpro-boldcn-webfont.woff2') format('woff2'),
+         url('/fonts/minionpro-boldcn-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'gt_america_trialcn_rg';
+    src: url('/fonts/gt-america-standard-regular-trial-webfont.woff2') format('woff2'),
+         url('/fonts/gt-america-standard-regular-trial-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'headlinesmedium';
+    src: url('/fonts/headlines-medium-webfont.woff2') format('woff2'),
+         url('/fonts/headlines-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111111;
+  --muted: #b2b2b2;
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+
+
+  --font-gtAmericaRg: 'gt_america_trialcn_rg';
+  --font-headline: 'headlinesmedium';
+  /* --font-gtAmericaRgI: 'gt_america_trialrg_it'; */
+  /* --font-gtAmericaBold: 'gt_america_trialcn_bd'; */
+  --font-minionNormal: 'minion_probold_cond';
+
+
+  --text-15: 15px;
+  --text-19: 19px;
+  --text-35: 35px;
+  --text-75: 75px;
+  --text-100: 100px;
+
+  --leading-80: 80%;
+  --leading-90: 90%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wordS36 {
+  word-spacing: -0.36px;
+  font-feature-settings: "ss01", "onum" 0, "pnum" 1;
+}
+
+
+.banner-slider img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* progress bar base */
+.banner-slider .progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.banner-slider .progress-segment {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-slider .progress-segment div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: white;
+  transition: width 0.2s linear;
 }
