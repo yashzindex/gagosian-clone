@@ -40,7 +40,6 @@ export const Header = () => {
                     scrolled ? " w-18" : "opacity-0 w-0"
                   } ${menuOpen ? "!opacity-100 !w-18" : ""}`}
                 >
-                  {/* this is max width get 0 default and when header scrool then width full as link show */}
                   <Link
                     href="/"
                     className="font-minionNormal whitespace-nowrap text-19 text-foreground block h-9 font-bold leading-9"
@@ -54,70 +53,6 @@ export const Header = () => {
                   } transition-all duration-300 ease-in-out`}
                 >
                   <ul className="flex max-lg:flex-col lg:items-center max-xl:border-t max-xl:border-[#cccccc]">
-                    {/* <li className="lg:mr-6 last:mr-0">
-                      <Link
-                        href="/"
-                        className="font-minionNormal whitespace-nowrap text-19 text-muted hover:text-foreground block h-9 font-bold leading-9 max-lg:px-4 max-lg:border-b max-lg:border-[#cccccc]"
-                      >
-                        Exhibitions
-                      </Link>
-                    </li>
-                    <li className="lg:mr-6 last:mr-0">
-                      <Link
-                        href="/"
-                        className="font-minionNormal whitespace-nowrap text-19 text-muted hover:text-foreground block h-9 font-bold leading-9 max-lg:px-4 max-lg:border-b max-lg:border-[#cccccc]"
-                      >
-                        Artists
-                      </Link>
-                    </li>
-                    <li className="lg:mr-6 last:mr-0">
-                      <Link
-                        href="/"
-                        className="font-minionNormal whitespace-nowrap text-19 text-muted hover:text-foreground block h-9 font-bold leading-9 max-lg:px-4 max-lg:border-b max-lg:border-[#cccccc]"
-                      >
-                        Fairs & Collecting
-                      </Link>
-                    </li>
-                    <li className="lg:mr-6 last:mr-0">
-                      <Link
-                        href="/"
-                        className="font-minionNormal whitespace-nowrap text-19 text-muted hover:text-foreground block h-9 font-bold leading-9 max-lg:px-4 max-lg:border-b max-lg:border-[#cccccc]"
-                      >
-                        Quarterly
-                      </Link>
-                    </li>
-                    <li className="lg:mr-6 last:mr-0">
-                      <Link
-                        href="/"
-                        className="font-minionNormal whitespace-nowrap text-19 text-muted hover:text-foreground block h-9 font-bold leading-9 max-lg:px-4 max-lg:border-b max-lg:border-[#cccccc]"
-                      >
-                        News
-                      </Link>
-                    </li>
-                    <li className="lg:mr-6 last:mr-0">
-                      <Link
-                        href="/"
-                        className="font-minionNormal whitespace-nowrap text-19 text-muted hover:text-foreground block h-9 font-bold leading-9 max-lg:px-4 max-lg:border-b max-lg:border-[#cccccc]"
-                      >
-                        Locations
-                      </Link>
-                    </li>
-                    <li className="lg:mr-6 last:mr-0">
-                      <Link
-                        href="/"
-                        className="font-minionNormal whitespace-nowrap text-19 text-muted hover:text-foreground block h-9 font-bold leading-9 max-lg:px-4 max-lg:border-b max-lg:border-[#cccccc]"
-                      >
-                        Shop
-                      </Link>
-                    </li>
-                    <li className="lg:mr-6 last:mr-0">
-                      <Link
-                        href="/"
-                        className="font-minionNormal whitespace-nowrap text-19 text-muted hover:text-foreground block h-9 font-bold leading-9 max-lg:px-4 max-lg:border-b max-lg:border-[#cccccc]"
-                      >
-                        Premieres
-                      </Link>
-                    </li> */}
                     {mainLinks.map((link) => (
                       <li key={link} className="lg:mr-6 last:mr-0">
                         <Link
